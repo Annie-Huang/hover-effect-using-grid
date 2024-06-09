@@ -11,6 +11,10 @@
   /*grid-template-columns: repeat(2, 1fr);*/
   /* The repeat is left hand side, 60px is the gap, 1fr is the right hand side */
   grid-template-columns: repeat(var(--column-count), var(--column-size)) 60px 1fr;
+  /* Place the image rows into the middle in the vertical direction */
+  grid-template-rows:
+    auto repeat(var(--row-count), var(--row-size))
+    auto;
 
   position: relative;
 
