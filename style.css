@@ -2,14 +2,14 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
-}
 
-.speakers-grid ul {
-  grid-column: 2 / 3;
+  & ul {
+    grid-column: 2 / 3;
 
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 /* ------------------------------------------------------------------------------- */
