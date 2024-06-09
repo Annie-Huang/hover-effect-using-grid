@@ -1,7 +1,16 @@
 .speakers-grid {
+  /* This is for the subgrid in the 1st column */
+  --column-count: 3;
+  --row-count: 5;
+  --column-size: 100px;
+  --row-size: 50px;
+
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(2, 1fr);
+
+  /*grid-template-columns: repeat(2, 1fr);*/
+  /* The repeat is left hand side, 60px is the gap, 1fr is the right hand side */
+  grid-template-columns: repeat(var(--column-count), var(--column-size)) 60px 1fr;
 
   position: relative;
 
