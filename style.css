@@ -35,6 +35,11 @@
     padding: 0;
   }
 
+  /* You can see when you hover the image, the corresponding text background-color change as well. */
+  a:is(:hover, :focus) {
+    background-color: var(--clr-primary-400);
+  }
+
   img {
     position: absolute;
     left: 0;
