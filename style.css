@@ -9,17 +9,26 @@
   gap: 1rem;
 
   /*grid-template-columns: repeat(2, 1fr);*/
+
   /* The repeat is left hand side, 60px is the gap, 1fr is the right hand side */
-  grid-template-columns: repeat(var(--column-count), var(--column-size)) 60px 1fr;
+  /*grid-template-columns: repeat(var(--column-count), var(--column-size)) 60px 1fr;*/
+  /* Use grid line to confine the list area columns range */
+  grid-template-columns: repeat(var(--column-count), var(--column-size)) 60px [list-start] 1fr [list-end];
+
   /* Place the image rows into the middle in the vertical direction */
-  grid-template-rows:
+  /*  grid-template-rows:
     auto repeat(var(--row-count), var(--row-size))
-    auto;
+    auto;*/
+  /* Use grid line to confine the list area rows range. */
+  grid-template-rows:
+    [list-start] auto repeat(var(--row-count), var(--row-size))
+    auto [list-end];
 
   position: relative;
 
   ul {
-    grid-column: 2 / 3;
+    /*grid-column: 2 / 3;*/
+    grid-area: list;
 
     list-style: none;
     margin: 0;
