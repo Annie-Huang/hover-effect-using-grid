@@ -42,6 +42,11 @@
 
     /* If you don't have below, it will overflow into the 2nd column */
     /*grid-column: 1 / 2;*/
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
   }
 }
 
