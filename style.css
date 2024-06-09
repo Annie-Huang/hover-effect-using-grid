@@ -47,6 +47,8 @@
     height: 100%;
     object-fit: cover;
     border-radius: 0.5rem;
+
+    transition: 500ms;
   }
 
   /* You can see when you hover the image, the corresponding text background-color change as well. */
@@ -58,8 +60,22 @@
       scale: 2;
       width: 100px;
       height: 100px;
+      max-width: 100vw;
       z-index: 2;
     }
+  }
+
+  a:not(:hover, :focus) img {
+    animation: z-index-hack 500ms;
+  }
+}
+
+@keyframes z-index-hack {
+  0%,
+  100% {
+    /* It is important that this z-index number is lower than the hover z-index, which is a 2 current.
+    We still one on hover is always on top of the unhover one if they happens to be overlapped */
+    z-index: 1;
   }
 }
 
